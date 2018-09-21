@@ -22,12 +22,10 @@
             </div>
 
             <div class="card-body">
-                @if($activeFile !== null)
-                    <section>
-                        <h2>Aktualni soubor</h2>
-                        <a href="{{ action('FileController@show') }}" target="_blank">{{ $activeFile->filename }}</a>
-                    </section>
-                @endif
+                <section>
+                    <h2>Aktualni soubor</h2>
+                    <a href="{{ action('FileController@show') }}" target="_blank">{{ $activeFile->filename }}</a>
+                </section>
 
 
                 <h2>Stare soubory</h2>
