@@ -24,7 +24,9 @@
             <div class="card-body">
                 <section>
                     <h2>Aktualni soubor</h2>
-                    <a href="{{ action('FileController@show') }}" target="_blank">{{ $activeFile->filename }}</a>
+                    @if($activeFile !== null)
+                        <a href="{{ action('FileController@show') }}" target="_blank">{{ $activeFile->filename }}</a>
+                    @endif
                 </section>
 
 
