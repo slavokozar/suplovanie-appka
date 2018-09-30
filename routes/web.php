@@ -10,17 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'PublicController@index');
+Route::get('/nastenka', 'PublicController@index');
 
 Route::get('/file/{filename?}', 'FileController@show');
 
-
-Auth::routes();
-
-Route::get('/admin', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index')->name('home');
 
 Route::post('/upload', 'UploadController@store');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
